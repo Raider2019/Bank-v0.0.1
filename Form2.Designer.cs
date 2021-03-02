@@ -49,6 +49,8 @@ namespace Bank
             this.адресDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.відділенняDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.посадаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
@@ -66,7 +68,7 @@ namespace Bank
             this.номерDataGridViewTextBoxColumn,
             this.емайлDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.відділеняBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 77);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(527, 152);
             this.dataGridView1.TabIndex = 0;
@@ -185,11 +187,31 @@ namespace Bank
             this.посадаDataGridViewTextBoxColumn.HeaderText = "Посада";
             this.посадаDataGridViewTextBoxColumn.Name = "посадаDataGridViewTextBoxColumn";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(32, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(32, 267);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "label2";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1007, 511);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form2";
@@ -201,6 +223,7 @@ namespace Bank
             ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.працівникиBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -225,5 +248,7 @@ namespace Bank
         private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn відділенняDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn посадаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
