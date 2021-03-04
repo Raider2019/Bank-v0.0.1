@@ -25,5 +25,27 @@ namespace Bank
             this.відділеняTableAdapter.Fill(this.bDDataSet.Відділеня);
 
         }
+
+        private void tb1_TextChanged(object sender, EventArgs e)
+        {
+           
+            відділеняBindingSource.Filter = " Адрес LIKE '" + tb1.Text + "%'";
+        }
+
+        private void tb2_TextChanged(object sender, EventArgs e)
+        {
+            працівникиBindingSource.Filter = "[№ працівника] LIKE '" + tb2.Text + "%'";
+        }
+
+        private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void головнеМеюToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.ShowDialog();
+        }
     }
 }
