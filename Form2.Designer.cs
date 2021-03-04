@@ -117,9 +117,9 @@ namespace Bank
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(32, 267);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 13);
+            this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Посада";
+            this.label2.Text = "Працівники";
             // 
             // menuStrip1
             // 

@@ -41,6 +41,7 @@ namespace Bank
         {
             Form2 f2 = new Form2();
             f2.Show();
+            this.Hide();
         }
     }
 }
