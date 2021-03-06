@@ -28,7 +28,7 @@ namespace Bank
 
         private void tb1_TextChanged(object sender, EventArgs e)
         {
-           
+
             відділеняBindingSource.Filter = " Адрес LIKE '" + tb1.Text + "%'";
         }
 
@@ -47,6 +47,26 @@ namespace Bank
             Form1 f1 = new Form1();
             f1.Show();
             this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddOtdelenia f = new AddOtdelenia(); // створити форму
+
+            if (f.ShowDialog() == DialogResult.OK) // відобразити форму
+            {
+                // якщо OK, то додати працівника
+                int NumOtd;
+                 string Address, Namber, mail;
+                NumOtd = Convert.ToInt16(f.textBox1.Text);
+                
+                Address = f.textBox2.Text; 
+                Namber = f.textBox3.Text;
+                mail = f.textBox4.Text;
+                // працює
+                this.відділеняTableAdapter.Insert(NumOtd, Address, Namber, mail); ; // вставка
+                this.відділеняTableAdapter.Fill(this.BDDataSet.Account) // відображення
+            }
         }
     }
 }

@@ -31,10 +31,6 @@ namespace Bank
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NumOtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.номерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.емайлDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.відділеняBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bDDataSet = new Bank.BDDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -51,6 +47,7 @@ namespace Bank
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.головнеМеюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.кліентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.проМенеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
@@ -59,13 +56,16 @@ namespace Bank
             this.tb2 = new System.Windows.Forms.TextBox();
             this.відділеняTableAdapter = new Bank.BDDataSetTableAdapters.ВідділеняTableAdapter();
             this.працівникиTableAdapter = new Bank.BDDataSetTableAdapters.ПрацівникиTableAdapter();
-            this.кліентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.NumOtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
@@ -80,38 +80,14 @@ namespace Bank
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.NumOtd,
-            this.адресDataGridViewTextBoxColumn,
-            this.номерDataGridViewTextBoxColumn,
-            this.емайлDataGridViewTextBoxColumn});
+            this.Address,
+            this.Namber,
+            this.mail});
             this.dataGridView1.DataSource = this.відділеняBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(35, 63);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(435, 148);
+            this.dataGridView1.Size = new System.Drawing.Size(458, 131);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // NumOtd
-            // 
-            this.NumOtd.DataPropertyName = "№ відділення";
-            this.NumOtd.HeaderText = "№ відділення";
-            this.NumOtd.Name = "NumOtd";
-            // 
-            // адресDataGridViewTextBoxColumn
-            // 
-            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
-            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
-            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
-            // 
-            // номерDataGridViewTextBoxColumn
-            // 
-            this.номерDataGridViewTextBoxColumn.DataPropertyName = "Номер";
-            this.номерDataGridViewTextBoxColumn.HeaderText = "Номер";
-            this.номерDataGridViewTextBoxColumn.Name = "номерDataGridViewTextBoxColumn";
-            // 
-            // емайлDataGridViewTextBoxColumn
-            // 
-            this.емайлDataGridViewTextBoxColumn.DataPropertyName = "Емайл";
-            this.емайлDataGridViewTextBoxColumn.HeaderText = "Емайл";
-            this.емайлDataGridViewTextBoxColumn.Name = "емайлDataGridViewTextBoxColumn";
             // 
             // відділеняBindingSource
             // 
@@ -233,6 +209,12 @@ namespace Bank
             this.головнеМеюToolStripMenuItem.Text = "Головне мею";
             this.головнеМеюToolStripMenuItem.Click += new System.EventHandler(this.головнеМеюToolStripMenuItem_Click);
             // 
+            // кліентиToolStripMenuItem
+            // 
+            this.кліентиToolStripMenuItem.Name = "кліентиToolStripMenuItem";
+            this.кліентиToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.кліентиToolStripMenuItem.Text = "Кліенти";
+            // 
             // проМенеToolStripMenuItem
             // 
             this.проМенеToolStripMenuItem.Name = "проМенеToolStripMenuItem";
@@ -288,12 +270,6 @@ namespace Bank
             // 
             this.працівникиTableAdapter.ClearBeforeFill = true;
             // 
-            // кліентиToolStripMenuItem
-            // 
-            this.кліентиToolStripMenuItem.Name = "кліентиToolStripMenuItem";
-            this.кліентиToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
-            this.кліентиToolStripMenuItem.Text = "Кліенти";
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(35, 228);
@@ -302,6 +278,7 @@ namespace Bank
             this.button1.TabIndex = 9;
             this.button1.Text = "Додати";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -347,6 +324,30 @@ namespace Bank
             this.button6.TabIndex = 14;
             this.button6.Text = "Видалити";
             this.button6.UseVisualStyleBackColor = true;
+            // 
+            // NumOtd
+            // 
+            this.NumOtd.DataPropertyName = "№ відділення";
+            this.NumOtd.HeaderText = "№ відділення";
+            this.NumOtd.Name = "NumOtd";
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Адрес";
+            this.Address.HeaderText = "Адрес";
+            this.Address.Name = "Address";
+            // 
+            // Namber
+            // 
+            this.Namber.DataPropertyName = "Номер";
+            this.Namber.HeaderText = "Номер";
+            this.Namber.Name = "Namber";
+            // 
+            // mail
+            // 
+            this.mail.DataPropertyName = "Емайл";
+            this.mail.HeaderText = "Емайл";
+            this.mail.Name = "mail";
             // 
             // Form2
             // 
@@ -404,10 +405,6 @@ namespace Bank
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumOtd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn номерDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn емайлDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tb1;
@@ -422,5 +419,9 @@ namespace Bank
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NumOtd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Namber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mail;
     }
 }
