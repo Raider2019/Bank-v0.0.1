@@ -142,6 +142,7 @@ namespace Bank
             this.Controls.Add(this.label1);
             this.Name = "AddOtdelenia";
             this.Text = "AddOtdelenia";
+            this.Load += new System.EventHandler(this.AddOtdelenia_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

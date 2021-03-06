@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Bank
 {
-    public partial class AddOtdelenia : Form
+    public partial class DelOtdelenia : Form
     {
-        public AddOtdelenia()
+        public DelOtdelenia()
         {
             InitializeComponent();
         }
 
-        private void AddOtdelenia_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

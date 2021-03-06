@@ -56,6 +56,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DelOtdelenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DelOtdelenia.Designer.cs">
+      <DependentUpon>DelOtdelenia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditOtdelenia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOtdelenia.Designer.cs">
+      <DependentUpon>EditOtdelenia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddOtdelenia.resx">
       <DependentUpon>AddOtdelenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelOtdelenia.resx">
+      <DependentUpon>DelOtdelenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOtdelenia.resx">
+      <DependentUpon>EditOtdelenia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

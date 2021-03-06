@@ -57,15 +57,90 @@ namespace Bank
             {
                 // якщо OK, то додати працівника
                 int NumOtd;
-                 string Address, Namber, mail;
+                string Address, Namber, mail;
                 NumOtd = Convert.ToInt16(f.textBox1.Text);
-                
-                Address = f.textBox2.Text; 
+
+                Address = f.textBox2.Text;
                 Namber = f.textBox3.Text;
                 mail = f.textBox4.Text;
                 // працює
-                this.відділеняTableAdapter.Insert(NumOtd, Address, Namber, mail); ; // вставка
-                this.відділеняTableAdapter.Fill(this.BDDataSet.Account) // відображення
+                this.відділеняTableAdapter.Insert(NumOtd, Address, Namber, mail); // вставка
+                this.відділеняTableAdapter.Fill(this.bDDataSet.Відділеня); // відображення
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            DelOtdelenia f = new DelOtdelenia(); // створити форму
+            int NumOtd;
+            string Address, Namber, mail;
+            int index;
+
+
+            index = dataGridView1.CurrentRow.Index;
+
+            // заповнити внутрішні змінні з поточного рядка dataGridView1
+            NumOtd = Convert.ToInt16(dataGridView1[0, index].Value);
+            Address = Convert.ToString(dataGridView1[1, index].Value);
+            Namber = Convert.ToString(dataGridView1[2, index].Value);
+            mail = Convert.ToString(dataGridView1[3, index].Value);
+
+            // сформувати інформаційний рядок
+            f.label2.Text = NumOtd + " " + Address + " " + Namber + " " + mail;
+
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                this.відділеняTableAdapter.Delete(NumOtd, mail);
+
+                this.відділеняTableAdapter.Fill(this.bDDataSet.Відділеня);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EditOtdelenia f = new EditOtdelenia(); // створити форму
+            int index;
+            string Address, Namber, mail;
+            int NamOtd;
+
+            if (dataGridView1.RowCount <= 1) return;
+
+            // отримати позицію виділеного рядка в dataGridView1
+            index = dataGridView1.CurrentRow.Index;
+
+            if (index == dataGridView1.RowCount - 1) return; //
+
+            // отримати дані рядка
+            NamOtd = (int)dataGridView1.Rows[index].Cells[0].Value;
+          Address = (string)dataGridView1.Rows[index].Cells[1].Value;
+       Namber = (string)dataGridView1.Rows[index].Cells[2].Value;
+           mail= (string)dataGridView1.Rows[index].Cells[3].Value;
+
+            // заповнити поля форми f
+          
+            f.textBox2.Text =Address;
+            f.textBox3.Text =Namber;
+            f.textBox4.Text = mail;
+            //NumOtd = int.Parse(f.textBox1.Text);
+       
+
+            if (f.ShowDialog() == DialogResult.OK) // викликати форму FormEditWorker
+            {
+                string nAddress, nNamber, nmail;
+             
+                // отримати нові (змінені) значення з форми
+                
+           nAddress = f.textBox2.Text;
+                nNamber  = 
+                nmail = f.textBox4.Text;
+           
+                   
+             
+                // змінити в адаптері
+                this.відділеняTableAdapter.Update(nAddress, nNamber, nmail, nAddress, nNamber);
+                this.відділеняTableAdapter.Fill(this.bDDataSet.Відділеня);
+
             }
         }
     }
