@@ -99,49 +99,40 @@ namespace Bank
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+
+
+            
+
             EditOtdelenia f = new EditOtdelenia(); // створити форму
             int index;
+            int NumOtd;
             string Address, Namber, mail;
-            int NamOtd;
 
             if (dataGridView1.RowCount <= 1) return;
-
-            // отримати позицію виділеного рядка в dataGridView1
             index = dataGridView1.CurrentRow.Index;
 
-            if (index == dataGridView1.RowCount - 1) return; //
+            if (index == dataGridView1.RowCount - 1) return;
 
-            // отримати дані рядка
-            NamOtd = (int)dataGridView1.Rows[index].Cells[0].Value;
-          Address = (string)dataGridView1.Rows[index].Cells[1].Value;
-       Namber = (string)dataGridView1.Rows[index].Cells[2].Value;
-           mail= (string)dataGridView1.Rows[index].Cells[3].Value;
+            NumOtd = (int)dataGridView1.Rows[index].Cells[0].Value;
+            Address  = (string)dataGridView1.Rows[index].Cells[1].Value;
+            Namber= (string)dataGridView1.Rows[index].Cells[2].Value;
+             mail = (string)dataGridView1.Rows[index].Cells[3].Value;
 
-            // заповнити поля форми f
-          
-            f.textBox2.Text =Address;
-            f.textBox3.Text =Namber;
-            f.textBox4.Text = mail;
-            //NumOtd = int.Parse(f.textBox1.Text);
-       
+            f.textBox1.Text = Address;
+            f.textBox2.Text = Namber;
+            f.textBox3.Text = mail;
 
-            if (f.ShowDialog() == DialogResult.OK) // викликати форму FormEditWorker
+            if(f.ShowDialog() == DialogResult.OK)
             {
-                string nAddress, nNamber, nmail;
-             
-                // отримати нові (змінені) значення з форми
-                
-           nAddress = f.textBox2.Text;
-                nNamber  = 
-                nmail = f.textBox4.Text;
-           
-                   
-             
-                // змінити в адаптері
-                this.відділеняTableAdapter.Update(nAddress, nNamber, nmail, nAddress, nNamber);
-                this.відділеняTableAdapter.Fill(this.bDDataSet.Відділеня);
+                string nAddress, nNumber, nmail;
 
+                nAddress = f.textBox1.Text;
+                nNumber = f.textBox2.Text;
+                nmail = f.textBox3.Text;
+
+                this.відділеняTableAdapter.Update(nAddress, nNumber, nmail, NumOtd, mail);
             }
         }
+        }
     }
-}

@@ -31,6 +31,10 @@ namespace Bank
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.NumOtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.відділеняBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bDDataSet = new Bank.BDDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -62,10 +66,6 @@ namespace Bank
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.NumOtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
@@ -88,6 +88,30 @@ namespace Bank
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(458, 131);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // NumOtd
+            // 
+            this.NumOtd.DataPropertyName = "№ відділення";
+            this.NumOtd.HeaderText = "№ відділення";
+            this.NumOtd.Name = "NumOtd";
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Адрес";
+            this.Address.HeaderText = "Адрес";
+            this.Address.Name = "Address";
+            // 
+            // Namber
+            // 
+            this.Namber.DataPropertyName = "Номер";
+            this.Namber.HeaderText = "Номер";
+            this.Namber.Name = "Namber";
+            // 
+            // mail
+            // 
+            this.mail.DataPropertyName = "Емайл";
+            this.mail.HeaderText = "Емайл";
+            this.mail.Name = "mail";
             // 
             // відділеняBindingSource
             // 
@@ -326,30 +350,6 @@ namespace Bank
             this.button6.TabIndex = 14;
             this.button6.Text = "Видалити";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // NumOtd
-            // 
-            this.NumOtd.DataPropertyName = "№ відділення";
-            this.NumOtd.HeaderText = "№ відділення";
-            this.NumOtd.Name = "NumOtd";
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Адрес";
-            this.Address.HeaderText = "Адрес";
-            this.Address.Name = "Address";
-            // 
-            // Namber
-            // 
-            this.Namber.DataPropertyName = "Номер";
-            this.Namber.HeaderText = "Номер";
-            this.Namber.Name = "Namber";
-            // 
-            // mail
-            // 
-            this.mail.DataPropertyName = "Емайл";
-            this.mail.HeaderText = "Емайл";
-            this.mail.Name = "mail";
             // 
             // Form2
             // 

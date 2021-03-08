@@ -17,7 +17,7 @@ namespace Bank
             InitializeComponent();
         }
 
-        private void AddOtdelenia_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
