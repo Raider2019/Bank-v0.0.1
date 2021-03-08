@@ -51,6 +51,12 @@
     <Compile Include="AddOtdelenia.Designer.cs">
       <DependentUpon>AddOtdelenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWorker.Designer.cs">
+      <DependentUpon>AddWorker.cs</DependentUpon>
+    </Compile>
     <Compile Include="BDDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,6 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddOtdelenia.resx">
       <DependentUpon>AddOtdelenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWorker.resx">
+      <DependentUpon>AddWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DelOtdelenia.resx">
       <DependentUpon>DelOtdelenia.cs</DependentUpon>

@@ -49,7 +49,8 @@ namespace Bank
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+        private void btnAddOtd_Click(object sender, EventArgs e)
         {
             AddOtdelenia f = new AddOtdelenia(); // створити форму
 
@@ -66,6 +67,39 @@ namespace Bank
                 // працює
                 this.відділеняTableAdapter.Insert(NumOtd, Address, Namber, mail); // вставка
                 this.відділеняTableAdapter.Fill(this.bDDataSet.Відділеня); // відображення
+            }
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EditOtdelenia f = new EditOtdelenia(); // створити форму
+            int index;
+            int NumOtd;
+            string Address, Namber, mail;
+
+            if (dataGridView1.RowCount <= 1) return;
+            index = dataGridView1.CurrentRow.Index;
+
+            if (index == dataGridView1.RowCount - 1) return;
+
+            NumOtd = (int)dataGridView1.Rows[index].Cells[0].Value;
+            Address = (string)dataGridView1.Rows[index].Cells[1].Value;
+            Namber = (string)dataGridView1.Rows[index].Cells[2].Value;
+            mail = (string)dataGridView1.Rows[index].Cells[3].Value;
+
+            f.textBox1.Text = Address;
+            f.textBox2.Text = Namber;
+            f.textBox3.Text = mail;
+
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                string nAddress, nNumber, nmail;
+
+                nAddress = f.textBox1.Text;
+                nNumber = f.textBox2.Text;
+                nmail = f.textBox3.Text;
+
+                this.відділеняTableAdapter.Update(nAddress, nNumber, nmail, NumOtd, mail);
+                this.відділеняTableAdapter.Fill(this.bDDataSet.Відділеня);
             }
         }
 
@@ -97,42 +131,32 @@ namespace Bank
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAddWorker_Click(object sender, EventArgs e)
         {
+            AddWorker f = new AddWorker(); // створити форму
+          
 
-
-
-            
-
-            EditOtdelenia f = new EditOtdelenia(); // створити форму
-            int index;
-            int NumOtd;
-            string Address, Namber, mail;
-
-            if (dataGridView1.RowCount <= 1) return;
-            index = dataGridView1.CurrentRow.Index;
-
-            if (index == dataGridView1.RowCount - 1) return;
-
-            NumOtd = (int)dataGridView1.Rows[index].Cells[0].Value;
-            Address  = (string)dataGridView1.Rows[index].Cells[1].Value;
-            Namber= (string)dataGridView1.Rows[index].Cells[2].Value;
-             mail = (string)dataGridView1.Rows[index].Cells[3].Value;
-
-            f.textBox1.Text = Address;
-            f.textBox2.Text = Namber;
-            f.textBox3.Text = mail;
-
-            if(f.ShowDialog() == DialogResult.OK)
+            if (f.ShowDialog() == DialogResult.OK) // відобразити форму
             {
-                string nAddress, nNumber, nmail;
+                string NumWorker;
+                  int   Otd;
+                string Name, WSex, Adrres, Pos;
+               short Age;
+                NumWorker = f.textBox1.Text;
+                Name = f.textBox2.Text;
 
-                nAddress = f.textBox1.Text;
-                nNumber = f.textBox2.Text;
-                nmail = f.textBox3.Text;
+                DateTime Date = Convert.ToDateTime(f.textBox3.Text);
+                Age =Convert.ToInt16( f.textBox4.Text);
+                WSex = f.textBox5.Text;
+                Adrres = f.textBox6.Text;
+                Otd = Convert.ToInt32(f.textBox7.Text);
+                Pos = f.textBox8.Text;
 
-                this.відділеняTableAdapter.Update(nAddress, nNumber, nmail, NumOtd, mail);
+
+                // працює
+                this.працівникиTableAdapter.Insert(NumWorker,Name,Date,Age,WSex,Adrres,Otd,Pos); // вставка
+                this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники); // відображення
             }
         }
-        }
+    }
     }
