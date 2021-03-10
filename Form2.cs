@@ -158,5 +158,34 @@ namespace Bank
                 this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники); // відображення
             }
         }
+
+        private void btnDelWorker_Click(object sender, EventArgs e)
+        {
+
+            string NumWorker;
+            int Otd;
+            string Name, WSex, Adrres, Pos;
+            short Age;
+            DateTime Date;
+            int index;
+
+            DelWorker f = new DelWorker(); // створити форму
+            index = dataGridView1.CurrentRow.Index;
+            NumWorker = Convert.ToString(dataGridView1[0, index].Value);
+            Name = Convert.ToString(dataGridView1[1, index].Value);
+            Date = Convert.ToDateTime(dataGridView1[2, index].Value);
+            Age = Convert.ToInt16(dataGridView1[3, index].Value);
+            WSex = Convert.ToString(dataGridView1[4, index].Value);
+            Adrres = Convert.ToString(dataGridView1[5, index].Value);
+          Otd = Convert.ToInt32(dataGridView1[6, index].Value);
+           Pos = Convert.ToString(dataGridView1[7, index].Value);
+            f.label2.Text = NumWorker + " " + Name;
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                this.працівникиTableAdapter.Delete( NumWorker,Name,Date,Age,WSex,Adrres,Otd,Pos);
+
+                this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники);
+            }
+        } 
     }
     }
