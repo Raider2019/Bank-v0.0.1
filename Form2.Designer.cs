@@ -342,6 +342,7 @@ namespace Bank
             this.btnEditWorker.TabIndex = 13;
             this.btnEditWorker.Text = "Змінити";
             this.btnEditWorker.UseVisualStyleBackColor = true;
+            this.btnEditWorker.Click += new System.EventHandler(this.btnEditWorker_Click);
             // 
             // btnDelWorker
             // 
@@ -374,7 +375,7 @@ namespace Bank
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-          //  this.Name = "Form2";
+            this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -49,7 +49,7 @@ namespace Bank
             this.Hide();
         }
 
-       
+
         private void btnAddOtd_Click(object sender, EventArgs e)
         {
             AddOtdelenia f = new AddOtdelenia(); // створити форму
@@ -134,19 +134,19 @@ namespace Bank
         private void btnAddWorker_Click(object sender, EventArgs e)
         {
             AddWorker f = new AddWorker(); // створити форму
-          
+
 
             if (f.ShowDialog() == DialogResult.OK) // відобразити форму
             {
                 string NumWorker;
-                  int   Otd;
+                int Otd;
                 string Name, WSex, Adrres, Pos;
-               short Age;
+                short Age;
                 NumWorker = f.textBox1.Text;
                 Name = f.textBox2.Text;
 
-                DateTime Date = Convert.ToDateTime(f.textBox3.Text);
-                Age =Convert.ToInt16( f.textBox4.Text);
+                string Date = f.textBox3.Text; ;
+                Age = Convert.ToInt16(f.textBox4.Text);
                 WSex = f.textBox5.Text;
                 Adrres = f.textBox6.Text;
                 Otd = Convert.ToInt32(f.textBox7.Text);
@@ -154,38 +154,42 @@ namespace Bank
 
 
                 // працює
-                this.працівникиTableAdapter.Insert(NumWorker,Name,Date,Age,WSex,Adrres,Otd,Pos); // вставка
+                this.працівникиTableAdapter.Insert(NumWorker, Name, Date, Age, WSex, Adrres, Otd, Pos); // вставка
                 this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники); // відображення
             }
         }
 
-        private void btnDelWorker_Click(object sender, EventArgs e)
+        public void btnDelWorker_Click(object sender, EventArgs e)
         {
-
-            string NumWorker;
-            int Otd;
-            string Name, WSex, Adrres, Pos;
+            DelWorker f = new DelWorker();// створити форму
+            string NumWorker, Name, Date, WSex, Adrres, Pos;
+          int Otd;
             short Age;
-            DateTime Date;
             int index;
 
-            DelWorker f = new DelWorker(); // створити форму
             index = dataGridView1.CurrentRow.Index;
-            NumWorker = Convert.ToString(dataGridView1[0, index].Value);
-            Name = Convert.ToString(dataGridView1[1, index].Value);
-            Date = Convert.ToDateTime(dataGridView1[2, index].Value);
-            Age = Convert.ToInt16(dataGridView1[3, index].Value);
-            WSex = Convert.ToString(dataGridView1[4, index].Value);
-            Adrres = Convert.ToString(dataGridView1[5, index].Value);
-          Otd = Convert.ToInt32(dataGridView1[6, index].Value);
-           Pos = Convert.ToString(dataGridView1[7, index].Value);
+
+            NumWorker = Convert.ToString(dataGridView2[0, index].Value);
+            Name = Convert.ToString(dataGridView2[1, index].Value);
+            Date = Convert.ToString(dataGridView2[2, index].Value);
+            Age = Convert.ToInt16(dataGridView2[3, index].Value);
+            WSex = Convert.ToString(dataGridView2[4, index].Value);
+            Adrres = Convert.ToString(dataGridView2[5, index].Value);
+            Otd = Convert.ToInt16(dataGridView2[6, index].Value);
+            Pos = Convert.ToString(dataGridView2[7, index].Value);
             f.label2.Text = NumWorker + " " + Name;
             if (f.ShowDialog() == DialogResult.OK)
             {
-                this.працівникиTableAdapter.Delete( NumWorker,Name,Date,Age,WSex,Adrres,Otd,Pos);
+                this.працівникиTableAdapter.Delete(NumWorker, Name, Date, Age, WSex, Adrres, Otd, Pos);
 
                 this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники);
             }
-        } 
+
+        }
+
+        private void btnEditWorker_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-    }
+}

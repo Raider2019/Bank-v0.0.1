@@ -57,10 +57,10 @@
     <Compile Include="AddWorker.Designer.cs">
       <DependentUpon>AddWorker.cs</DependentUpon>
     </Compile>
-    <Compile Include="BDDataSet.Designer.cs">
+    <Compile Include="BDDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>BDDataSet.xsd</DependentUpon>
+      <DependentUpon>BDDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DelOtdelenia.cs">
       <SubType>Form</SubType>
@@ -124,16 +124,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="BDDataSet.xsc">
-      <DependentUpon>BDDataSet.xsd</DependentUpon>
+    <None Include="BDDataSet1.xsc">
+      <DependentUpon>BDDataSet1.xsd</DependentUpon>
     </None>
-    <None Include="BDDataSet.xsd">
+    <None Include="BDDataSet1.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>BDDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BDDataSet.xss">
-      <DependentUpon>BDDataSet.xsd</DependentUpon>
+    <None Include="BDDataSet1.xss">
+      <DependentUpon>BDDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -147,11 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="BD.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
