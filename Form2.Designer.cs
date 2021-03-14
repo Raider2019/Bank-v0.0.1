@@ -38,6 +38,14 @@ namespace Bank
             this.відділеняBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bDDataSet = new Bank.BDDataSet();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.NumWorker = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Adrres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Otd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.працівникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,14 +66,7 @@ namespace Bank
             this.btnAddWorker = new System.Windows.Forms.Button();
             this.btnEditWorker = new System.Windows.Forms.Button();
             this.btnDelWorker = new System.Windows.Forms.Button();
-            this.NumWorker = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adrres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Otd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableAdapterManager = new Bank.BDDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
@@ -142,6 +143,54 @@ namespace Bank
             this.dataGridView2.Size = new System.Drawing.Size(845, 170);
             this.dataGridView2.TabIndex = 1;
             // 
+            // NumWorker
+            // 
+            this.NumWorker.DataPropertyName = "№ працівника";
+            this.NumWorker.HeaderText = "№ працівника";
+            this.NumWorker.Name = "NumWorker";
+            // 
+            // WName
+            // 
+            this.WName.DataPropertyName = "Імя";
+            this.WName.HeaderText = "Імя";
+            this.WName.Name = "WName";
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Дата народження";
+            this.Date.HeaderText = "Дата народження";
+            this.Date.Name = "Date";
+            // 
+            // age
+            // 
+            this.age.DataPropertyName = "Вік";
+            this.age.HeaderText = "Вік";
+            this.age.Name = "age";
+            // 
+            // WSex
+            // 
+            this.WSex.DataPropertyName = "Стать";
+            this.WSex.HeaderText = "Стать";
+            this.WSex.Name = "WSex";
+            // 
+            // Adrres
+            // 
+            this.Adrres.DataPropertyName = "Адрес";
+            this.Adrres.HeaderText = "Адрес";
+            this.Adrres.Name = "Adrres";
+            // 
+            // Otd
+            // 
+            this.Otd.DataPropertyName = "Відділення";
+            this.Otd.HeaderText = "Відділення";
+            this.Otd.Name = "Otd";
+            // 
+            // Pos
+            // 
+            this.Pos.DataPropertyName = "Посада";
+            this.Pos.HeaderText = "Посада";
+            this.Pos.Name = "Pos";
+            // 
             // працівникиBindingSource
             // 
             this.працівникиBindingSource.DataMember = "Працівники";
@@ -174,7 +223,7 @@ namespace Bank
             this.вихідToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(996, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1012, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -306,59 +355,19 @@ namespace Bank
             this.btnDelWorker.UseVisualStyleBackColor = true;
             this.btnDelWorker.Click += new System.EventHandler(this.btnDelWorker_Click);
             // 
-            // NumWorker
+            // tableAdapterManager
             // 
-            this.NumWorker.DataPropertyName = "№ працівника";
-            this.NumWorker.HeaderText = "№ працівника";
-            this.NumWorker.Name = "NumWorker";
-            // 
-            // WName
-            // 
-            this.WName.DataPropertyName = "Імя";
-            this.WName.HeaderText = "Імя";
-            this.WName.Name = "WName";
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Дата народження";
-            this.Date.HeaderText = "Дата народження";
-            this.Date.Name = "Date";
-            // 
-            // age
-            // 
-            this.age.DataPropertyName = "Вік";
-            this.age.HeaderText = "Вік";
-            this.age.Name = "age";
-            // 
-            // WSex
-            // 
-            this.WSex.DataPropertyName = "Стать";
-            this.WSex.HeaderText = "Стать";
-            this.WSex.Name = "WSex";
-            // 
-            // Adrres
-            // 
-            this.Adrres.DataPropertyName = "Адрес";
-            this.Adrres.HeaderText = "Адрес";
-            this.Adrres.Name = "Adrres";
-            // 
-            // Otd
-            // 
-            this.Otd.DataPropertyName = "Відділення";
-            this.Otd.HeaderText = "Відділення";
-            this.Otd.Name = "Otd";
-            // 
-            // Pos
-            // 
-            this.Pos.DataPropertyName = "Посада";
-            this.Pos.HeaderText = "Посада";
-            this.Pos.Name = "Pos";
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.UpdateOrder = Bank.BDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.ВідділеняTableAdapter = this.відділеняTableAdapter;
+            this.tableAdapterManager.КліентиTableAdapter = null;
+            this.tableAdapterManager.ПрацівникиTableAdapter = this.працівникиTableAdapter;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 493);
+            this.ClientSize = new System.Drawing.Size(1012, 497);
             this.Controls.Add(this.btnDelWorker);
             this.Controls.Add(this.btnEditWorker);
             this.Controls.Add(this.btnAddWorker);
@@ -428,5 +437,6 @@ namespace Bank
         private System.Windows.Forms.DataGridViewTextBoxColumn Adrres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Otd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pos;
+        private BDDataSetTableAdapters.TableAdapterManager tableAdapterManager;
     }
 }
