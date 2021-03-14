@@ -31,22 +31,6 @@ namespace Bank
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NumOtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.відділеняBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bDDataSet = new Bank.BDDataSet();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.NumWorker = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WSex = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Adrres = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Otd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.працівникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -58,21 +42,37 @@ namespace Bank
             this.label4 = new System.Windows.Forms.Label();
             this.tb1 = new System.Windows.Forms.TextBox();
             this.tb2 = new System.Windows.Forms.TextBox();
-            this.відділеняTableAdapter = new Bank.BDDataSetTableAdapters.ВідділеняTableAdapter();
-            this.працівникиTableAdapter = new Bank.BDDataSetTableAdapters.ПрацівникиTableAdapter();
             this.btnAddOtd = new System.Windows.Forms.Button();
             this.btnEditOtd = new System.Windows.Forms.Button();
             this.btnDelOtd = new System.Windows.Forms.Button();
             this.btnAddWorker = new System.Windows.Forms.Button();
             this.btnEditWorker = new System.Windows.Forms.Button();
             this.btnDelWorker = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.працівникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bDDataSet = new Bank.BDDataSet();
+            this.NumOtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Namber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.відділеняBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.відділеняTableAdapter = new Bank.BDDataSetTableAdapters.ВідділеняTableAdapter();
+            this.працівникиTableAdapter = new Bank.BDDataSetTableAdapters.ПрацівникиTableAdapter();
             this.tableAdapterManager = new Bank.BDDataSetTableAdapters.TableAdapterManager();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.працівникиBindingSource)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -89,112 +89,6 @@ namespace Bank
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(458, 131);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // NumOtd
-            // 
-            this.NumOtd.DataPropertyName = "№ відділення";
-            this.NumOtd.HeaderText = "№ відділення";
-            this.NumOtd.Name = "NumOtd";
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Адрес";
-            this.Address.HeaderText = "Адрес";
-            this.Address.Name = "Address";
-            // 
-            // Namber
-            // 
-            this.Namber.DataPropertyName = "Номер";
-            this.Namber.HeaderText = "Номер";
-            this.Namber.Name = "Namber";
-            // 
-            // mail
-            // 
-            this.mail.DataPropertyName = "Емайл";
-            this.mail.HeaderText = "Емайл";
-            this.mail.Name = "mail";
-            // 
-            // відділеняBindingSource
-            // 
-            this.відділеняBindingSource.DataMember = "Відділеня";
-            this.відділеняBindingSource.DataSource = this.bDDataSet;
-            // 
-            // bDDataSet
-            // 
-            this.bDDataSet.DataSetName = "BDDataSet";
-            this.bDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.NumWorker,
-            this.WName,
-            this.Date,
-            this.age,
-            this.WSex,
-            this.Adrres,
-            this.Otd,
-            this.Pos});
-            this.dataGridView2.DataSource = this.працівникиBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(35, 299);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(845, 170);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // NumWorker
-            // 
-            this.NumWorker.DataPropertyName = "№ працівника";
-            this.NumWorker.HeaderText = "№ працівника";
-            this.NumWorker.Name = "NumWorker";
-            // 
-            // WName
-            // 
-            this.WName.DataPropertyName = "Імя";
-            this.WName.HeaderText = "Імя";
-            this.WName.Name = "WName";
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Дата народження";
-            this.Date.HeaderText = "Дата народження";
-            this.Date.Name = "Date";
-            // 
-            // age
-            // 
-            this.age.DataPropertyName = "Вік";
-            this.age.HeaderText = "Вік";
-            this.age.Name = "age";
-            // 
-            // WSex
-            // 
-            this.WSex.DataPropertyName = "Стать";
-            this.WSex.HeaderText = "Стать";
-            this.WSex.Name = "WSex";
-            // 
-            // Adrres
-            // 
-            this.Adrres.DataPropertyName = "Адрес";
-            this.Adrres.HeaderText = "Адрес";
-            this.Adrres.Name = "Adrres";
-            // 
-            // Otd
-            // 
-            this.Otd.DataPropertyName = "Відділення";
-            this.Otd.HeaderText = "Відділення";
-            this.Otd.Name = "Otd";
-            // 
-            // Pos
-            // 
-            this.Pos.DataPropertyName = "Посада";
-            this.Pos.HeaderText = "Посада";
-            this.Pos.Name = "Pos";
-            // 
-            // працівникиBindingSource
-            // 
-            this.працівникиBindingSource.DataMember = "Працівники";
-            this.працівникиBindingSource.DataSource = this.bDDataSet;
             // 
             // label1
             // 
@@ -223,7 +117,7 @@ namespace Bank
             this.вихідToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1012, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1018, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -239,6 +133,7 @@ namespace Bank
             this.кліентиToolStripMenuItem.Name = "кліентиToolStripMenuItem";
             this.кліентиToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.кліентиToolStripMenuItem.Text = "Кліенти";
+            this.кліентиToolStripMenuItem.Click += new System.EventHandler(this.кліентиToolStripMenuItem_Click);
             // 
             // проМенеToolStripMenuItem
             // 
@@ -286,14 +181,6 @@ namespace Bank
             this.tb2.Size = new System.Drawing.Size(100, 20);
             this.tb2.TabIndex = 8;
             this.tb2.TextChanged += new System.EventHandler(this.tb2_TextChanged);
-            // 
-            // відділеняTableAdapter
-            // 
-            this.відділеняTableAdapter.ClearBeforeFill = true;
-            // 
-            // працівникиTableAdapter
-            // 
-            this.працівникиTableAdapter.ClearBeforeFill = true;
             // 
             // btnAddOtd
             // 
@@ -355,11 +242,126 @@ namespace Bank
             this.btnDelWorker.UseVisualStyleBackColor = true;
             this.btnDelWorker.Click += new System.EventHandler(this.btnDelWorker_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8});
+            this.dataGridView2.DataSource = this.працівникиBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(35, 299);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(837, 197);
+            this.dataGridView2.TabIndex = 14;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "№ працівника";
+            this.dataGridViewTextBoxColumn1.HeaderText = "№ працівника";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Імя";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Імя";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Дата народження";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Дата народження";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Вік";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Вік";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Стать";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Стать";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Адрес";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Адрес";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Відділення";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Відділення";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Посада";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Посада";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // працівникиBindingSource
+            // 
+            this.працівникиBindingSource.DataMember = "Працівники";
+            this.працівникиBindingSource.DataSource = this.bDDataSet;
+            // 
+            // bDDataSet
+            // 
+            this.bDDataSet.DataSetName = "BDDataSet";
+            this.bDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // NumOtd
+            // 
+            this.NumOtd.DataPropertyName = "№ відділення";
+            this.NumOtd.HeaderText = "№ відділення";
+            this.NumOtd.Name = "NumOtd";
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Адрес";
+            this.Address.HeaderText = "Адрес";
+            this.Address.Name = "Address";
+            // 
+            // Namber
+            // 
+            this.Namber.DataPropertyName = "Номер";
+            this.Namber.HeaderText = "Номер";
+            this.Namber.Name = "Namber";
+            // 
+            // mail
+            // 
+            this.mail.DataPropertyName = "Емайл";
+            this.mail.HeaderText = "Емайл";
+            this.mail.Name = "mail";
+            // 
+            // відділеняBindingSource
+            // 
+            this.відділеняBindingSource.DataMember = "Відділеня";
+            this.відділеняBindingSource.DataSource = this.bDDataSet;
+            // 
+            // відділеняTableAdapter
+            // 
+            this.відділеняTableAdapter.ClearBeforeFill = true;
+            // 
+            // працівникиTableAdapter
+            // 
+            this.працівникиTableAdapter.ClearBeforeFill = true;
+            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.UpdateOrder = Bank.BDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.ВідділеняTableAdapter = this.відділеняTableAdapter;
+            this.tableAdapterManager.ВкладиTableAdapter = null;
             this.tableAdapterManager.КліентиTableAdapter = null;
             this.tableAdapterManager.ПрацівникиTableAdapter = this.працівникиTableAdapter;
             // 
@@ -367,7 +369,8 @@ namespace Bank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1012, 497);
+            this.ClientSize = new System.Drawing.Size(1018, 540);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnDelWorker);
             this.Controls.Add(this.btnEditWorker);
             this.Controls.Add(this.btnAddWorker);
@@ -380,7 +383,6 @@ namespace Bank
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -388,12 +390,12 @@ namespace Bank
             this.Text = "Банк";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.працівникиBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.працівникиBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -402,7 +404,6 @@ namespace Bank
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private BDDataSet bDDataSet;
         private System.Windows.Forms.BindingSource відділеняBindingSource;
         private BDDataSetTableAdapters.ВідділеняTableAdapter відділеняTableAdapter;
@@ -429,14 +430,15 @@ namespace Bank
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namber;
         private System.Windows.Forms.DataGridViewTextBoxColumn mail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumWorker;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewTextBoxColumn age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WSex;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Adrres;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Otd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pos;
         private BDDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
     }
 }

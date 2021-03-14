@@ -240,5 +240,13 @@ namespace Bank
             }
 
         }
+
+        private void кліентиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+
+            f3.Show();
+            this.Hide();
+        }
     }
 }
