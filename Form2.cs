@@ -140,10 +140,10 @@ namespace Bank
             {
                 string NumWorker;
                 int Otd;
-                string Name, WSex, Adrres, Pos;
+                string WName, WSex, Adrres, Pos;
                 short Age;
                 NumWorker = f.textBox1.Text;
-                Name = f.textBox2.Text;
+                WName = f.textBox2.Text;
 
                 string Date = f.textBox3.Text; ;
                 Age = Convert.ToInt16(f.textBox4.Text);
@@ -154,7 +154,7 @@ namespace Bank
 
 
                 // працює
-                this.працівникиTableAdapter.Insert(NumWorker, Name, Date, Age, WSex, Adrres, Otd, Pos); // вставка
+                this.працівникиTableAdapter.Insert(NumWorker, WName, Date, Age, WSex, Adrres, Otd, Pos); // вставка
                 this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники); // відображення
             }
         }
@@ -162,25 +162,25 @@ namespace Bank
         public void btnDelWorker_Click(object sender, EventArgs e)
         {
             DelWorker f = new DelWorker();// створити форму
-            string NumWorker, Name, Date, WSex, Adrres, Pos;
-          int Otd;
+            string NumWorker, WName, Date, WSex, Adrres, Pos;
+            int Otd;
             short Age;
             int index;
 
-            index = dataGridView1.CurrentRow.Index;
+            index = dataGridView2.CurrentRow.Index;
 
             NumWorker = Convert.ToString(dataGridView2[0, index].Value);
-            Name = Convert.ToString(dataGridView2[1, index].Value);
+            WName = Convert.ToString(dataGridView2[1, index].Value);
             Date = Convert.ToString(dataGridView2[2, index].Value);
             Age = Convert.ToInt16(dataGridView2[3, index].Value);
             WSex = Convert.ToString(dataGridView2[4, index].Value);
             Adrres = Convert.ToString(dataGridView2[5, index].Value);
             Otd = Convert.ToInt16(dataGridView2[6, index].Value);
             Pos = Convert.ToString(dataGridView2[7, index].Value);
-            f.label2.Text = NumWorker + " " + Name;
+            f.label2.Text = NumWorker + " " + WName;
             if (f.ShowDialog() == DialogResult.OK)
             {
-                this.працівникиTableAdapter.Delete(NumWorker, Name, Date, Age, WSex, Adrres, Otd, Pos);
+                this.працівникиTableAdapter.Delete(NumWorker, WName, Date, Age, WSex, Adrres, Otd, Pos);
 
                 this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники);
             }
@@ -189,6 +189,55 @@ namespace Bank
 
         private void btnEditWorker_Click(object sender, EventArgs e)
         {
+            EditWorker f = new EditWorker(); // створити форму
+            string NumWorker, WName, Date, WSex, Adrres, Pos;
+            int Otd;
+            short Age;
+            int index;
+
+            if (dataGridView2.RowCount <= 1) return;
+            index = dataGridView2.CurrentRow.Index;
+
+            if (index == dataGridView2.RowCount - 1) return;
+
+            NumWorker = (string)dataGridView2.Rows[index].Cells[0].Value;
+            WName = (string)dataGridView2.Rows[index].Cells[1].Value;
+            Date = (string)dataGridView2.Rows[index].Cells[2].Value;
+            Age = (short)dataGridView2.Rows[index].Cells[3].Value;
+            WSex = (string)dataGridView2.Rows[index].Cells[4].Value;
+            Adrres = (string)dataGridView2.Rows[index].Cells[5].Value;
+            Otd = (int)dataGridView2.Rows[index].Cells[6].Value;
+            Pos = (string)dataGridView2.Rows[index].Cells[7].Value;
+
+
+            f.textBox1.Text = WName;
+            f.textBox2.Text = Date;
+            f.textBox3.Text = Convert.ToString(Age);
+            f.textBox4.Text = WSex;
+            f.textBox5.Text = Adrres;
+            f.textBox6.Text = Convert.ToString(Otd);
+            f.textBox7.Text = Pos;
+
+
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                string nWName, nDate, nWSex, nAdrres, nPos;
+                int nOtd;
+                short nAge;
+
+
+                nWName = f.textBox1.Text;
+                nDate = f.textBox2.Text;
+                nAge = Convert.ToInt16(f.textBox3.Text);
+                nWSex = f.textBox4.Text;
+                nAdrres = f.textBox5.Text;
+                nOtd = Convert.ToInt32(f.textBox6.Text);
+                nPos = f.textBox7.Text;
+
+                this.працівникиTableAdapter.Update(nWName, nDate, nAge, nWSex, nAdrres, nOtd, nPos, NumWorker, WName, Date, Age,
+                    WSex, Adrres, Otd, Pos);
+                this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники);
+            }
 
         }
     }

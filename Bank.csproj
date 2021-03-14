@@ -80,6 +80,12 @@
     <Compile Include="EditOtdelenia.Designer.cs">
       <DependentUpon>EditOtdelenia.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditWorker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditWorker.Designer.cs">
+      <DependentUpon>EditWorker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditOtdelenia.resx">
       <DependentUpon>EditOtdelenia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditWorker.resx">
+      <DependentUpon>EditWorker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
