@@ -534,7 +534,7 @@ namespace Bank {
                 this._column__відділення.Unique = true;
                 this.columnАдрес.MaxLength = 536870910;
                 this.columnНомер.MaxLength = 536870910;
-                this.columnЕмайл.MaxLength = 12;
+                this.columnЕмайл.MaxLength = 120;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

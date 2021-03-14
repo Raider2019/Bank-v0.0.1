@@ -261,7 +261,7 @@
               <xs:element name="Емайл" msprop:Generator_ColumnVarNameInTable="columnЕмайл" msprop:Generator_ColumnPropNameInRow="Емайл" msprop:Generator_ColumnPropNameInTable="ЕмайлColumn" msprop:Generator_UserColumnName="Емайл" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="12" />
+                    <xs:maxLength value="120" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
