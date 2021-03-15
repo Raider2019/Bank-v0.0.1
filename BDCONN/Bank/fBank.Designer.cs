@@ -56,24 +56,24 @@ namespace Bank
             this.відділеняTableAdapter = new Bank.BDDataSetTableAdapters.ВідділеняTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.grb3 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txb11 = new System.Windows.Forms.TextBox();
             this.працівникиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txb12 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txb10 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txb9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.btnDelWork = new System.Windows.Forms.Button();
             this.btnUpdateWork = new System.Windows.Forms.Button();
             this.btnNextWork = new System.Windows.Forms.Button();
             this.btnAddWork = new System.Windows.Forms.Button();
             this.btnPrevWork = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txb8 = new System.Windows.Forms.TextBox();
+            this.txb7 = new System.Windows.Forms.TextBox();
+            this.txb6 = new System.Windows.Forms.TextBox();
+            this.txb5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -90,6 +90,11 @@ namespace Bank
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.працівникиTableAdapter = new Bank.BDDataSetTableAdapters.ПрацівникиTableAdapter();
             this.tableAdapterManager = new Bank.BDDataSetTableAdapters.TableAdapterManager();
+            this.bdDataSet1 = new Bank.BDDataSet();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txbSearchOtd = new System.Windows.Forms.TextBox();
+            this.tbSearchOtd = new System.Windows.Forms.Button();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
@@ -99,6 +104,7 @@ namespace Bank
             ((System.ComponentModel.ISupportInitialize)(this.працівникиBindingSource)).BeginInit();
             this.grb4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.працівникиDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // grb1
@@ -121,7 +127,7 @@ namespace Bank
             this.grb1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.grb1.Location = new System.Drawing.Point(0, 27);
             this.grb1.Name = "grb1";
-            this.grb1.Size = new System.Drawing.Size(413, 374);
+            this.grb1.Size = new System.Drawing.Size(413, 314);
             this.grb1.TabIndex = 0;
             this.grb1.TabStop = false;
             this.grb1.Text = "Дані відділення";
@@ -179,7 +185,7 @@ namespace Bank
             // txb4
             // 
             this.txb4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.відділеняBindingSource, "Емайл", true));
-            this.txb4.Location = new System.Drawing.Point(127, 151);
+            this.txb4.Location = new System.Drawing.Point(127, 150);
             this.txb4.Name = "txb4";
             this.txb4.Size = new System.Drawing.Size(176, 26);
             this.txb4.TabIndex = 7;
@@ -341,23 +347,23 @@ namespace Bank
             // grb3
             // 
             this.grb3.BackColor = System.Drawing.Color.DarkOrange;
-            this.grb3.Controls.Add(this.textBox8);
+            this.grb3.Controls.Add(this.txb11);
             this.grb3.Controls.Add(this.label12);
-            this.grb3.Controls.Add(this.textBox7);
+            this.grb3.Controls.Add(this.txb12);
             this.grb3.Controls.Add(this.label11);
-            this.grb3.Controls.Add(this.textBox6);
+            this.grb3.Controls.Add(this.txb10);
             this.grb3.Controls.Add(this.label10);
-            this.grb3.Controls.Add(this.textBox5);
+            this.grb3.Controls.Add(this.txb9);
             this.grb3.Controls.Add(this.label9);
             this.grb3.Controls.Add(this.btnDelWork);
             this.grb3.Controls.Add(this.btnUpdateWork);
             this.grb3.Controls.Add(this.btnNextWork);
             this.grb3.Controls.Add(this.btnAddWork);
             this.grb3.Controls.Add(this.btnPrevWork);
-            this.grb3.Controls.Add(this.textBox1);
-            this.grb3.Controls.Add(this.textBox2);
-            this.grb3.Controls.Add(this.textBox3);
-            this.grb3.Controls.Add(this.textBox4);
+            this.grb3.Controls.Add(this.txb8);
+            this.grb3.Controls.Add(this.txb7);
+            this.grb3.Controls.Add(this.txb6);
+            this.grb3.Controls.Add(this.txb5);
             this.grb3.Controls.Add(this.label5);
             this.grb3.Controls.Add(this.label6);
             this.grb3.Controls.Add(this.label7);
@@ -366,18 +372,18 @@ namespace Bank
             this.grb3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.grb3.Location = new System.Drawing.Point(0, 407);
             this.grb3.Name = "grb3";
-            this.grb3.Size = new System.Drawing.Size(413, 478);
+            this.grb3.Size = new System.Drawing.Size(413, 442);
             this.grb3.TabIndex = 3;
             this.grb3.TabStop = false;
             this.grb3.Text = "Дані працівники";
             // 
-            // textBox8
+            // txb11
             // 
-            this.textBox8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Відділення", true));
-            this.textBox8.Location = new System.Drawing.Point(152, 287);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(176, 26);
-            this.textBox8.TabIndex = 20;
+            this.txb11.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Відділення", true));
+            this.txb11.Location = new System.Drawing.Point(152, 287);
+            this.txb11.Name = "txb11";
+            this.txb11.Size = new System.Drawing.Size(176, 26);
+            this.txb11.TabIndex = 20;
             // 
             // працівникиBindingSource
             // 
@@ -394,13 +400,13 @@ namespace Bank
             this.label12.TabIndex = 19;
             this.label12.Text = "Відділення";
             // 
-            // textBox7
+            // txb12
             // 
-            this.textBox7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Посада", true));
-            this.textBox7.Location = new System.Drawing.Point(152, 326);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(176, 26);
-            this.textBox7.TabIndex = 18;
+            this.txb12.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Посада", true));
+            this.txb12.Location = new System.Drawing.Point(152, 326);
+            this.txb12.Name = "txb12";
+            this.txb12.Size = new System.Drawing.Size(176, 26);
+            this.txb12.TabIndex = 18;
             // 
             // label11
             // 
@@ -412,13 +418,13 @@ namespace Bank
             this.label11.TabIndex = 17;
             this.label11.Text = "Посада";
             // 
-            // textBox6
+            // txb10
             // 
-            this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Адрес", true));
-            this.textBox6.Location = new System.Drawing.Point(152, 245);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(176, 26);
-            this.textBox6.TabIndex = 16;
+            this.txb10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Адрес", true));
+            this.txb10.Location = new System.Drawing.Point(152, 245);
+            this.txb10.Name = "txb10";
+            this.txb10.Size = new System.Drawing.Size(176, 26);
+            this.txb10.TabIndex = 16;
             // 
             // label10
             // 
@@ -430,13 +436,13 @@ namespace Bank
             this.label10.TabIndex = 15;
             this.label10.Text = "Адрес";
             // 
-            // textBox5
+            // txb9
             // 
-            this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Стать", true));
-            this.textBox5.Location = new System.Drawing.Point(152, 200);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 26);
-            this.textBox5.TabIndex = 14;
+            this.txb9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Стать", true));
+            this.txb9.Location = new System.Drawing.Point(152, 200);
+            this.txb9.Name = "txb9";
+            this.txb9.Size = new System.Drawing.Size(176, 26);
+            this.txb9.TabIndex = 14;
             // 
             // label9
             // 
@@ -498,37 +504,37 @@ namespace Bank
             this.btnPrevWork.UseVisualStyleBackColor = true;
             this.btnPrevWork.Click += new System.EventHandler(this.btnPrevWork_Click);
             // 
-            // textBox1
+            // txb8
             // 
-            this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Вік", true));
-            this.textBox1.Location = new System.Drawing.Point(152, 158);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 26);
-            this.textBox1.TabIndex = 7;
+            this.txb8.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Вік", true));
+            this.txb8.Location = new System.Drawing.Point(152, 158);
+            this.txb8.Name = "txb8";
+            this.txb8.Size = new System.Drawing.Size(176, 26);
+            this.txb8.TabIndex = 7;
             // 
-            // textBox2
+            // txb7
             // 
-            this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Дата народження", true));
-            this.textBox2.Location = new System.Drawing.Point(152, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 26);
-            this.textBox2.TabIndex = 6;
+            this.txb7.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Дата народження", true));
+            this.txb7.Location = new System.Drawing.Point(152, 121);
+            this.txb7.Name = "txb7";
+            this.txb7.Size = new System.Drawing.Size(176, 26);
+            this.txb7.TabIndex = 6;
             // 
-            // textBox3
+            // txb6
             // 
-            this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Імя", true));
-            this.textBox3.Location = new System.Drawing.Point(127, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 26);
-            this.textBox3.TabIndex = 5;
+            this.txb6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Імя", true));
+            this.txb6.Location = new System.Drawing.Point(127, 81);
+            this.txb6.Name = "txb6";
+            this.txb6.Size = new System.Drawing.Size(176, 26);
+            this.txb6.TabIndex = 5;
             // 
-            // textBox4
+            // txb5
             // 
-            this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "№ працівника", true));
-            this.textBox4.Location = new System.Drawing.Point(127, 45);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 26);
-            this.textBox4.TabIndex = 4;
+            this.txb5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "№ працівника", true));
+            this.txb5.Location = new System.Drawing.Point(127, 45);
+            this.txb5.Name = "txb5";
+            this.txb5.Size = new System.Drawing.Size(176, 26);
+            this.txb5.TabIndex = 4;
             // 
             // label5
             // 
@@ -679,12 +685,58 @@ namespace Bank
             this.tableAdapterManager.КліентиTableAdapter = null;
             this.tableAdapterManager.ПрацівникиTableAdapter = this.працівникиTableAdapter;
             // 
+            // bdDataSet1
+            // 
+            this.bdDataSet1.DataSetName = "BDDataSet";
+            this.bdDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(429, 753);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 43);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Пошук";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(601, 766);
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(303, 29);
+            this.textBox9.TabIndex = 22;
+            // 
+            // txbSearchOtd
+            // 
+            this.txbSearchOtd.Location = new System.Drawing.Point(601, 354);
+            this.txbSearchOtd.Multiline = true;
+            this.txbSearchOtd.Name = "txbSearchOtd";
+            this.txbSearchOtd.Size = new System.Drawing.Size(303, 29);
+            this.txbSearchOtd.TabIndex = 24;
+            // 
+            // tbSearchOtd
+            // 
+            this.tbSearchOtd.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbSearchOtd.Location = new System.Drawing.Point(440, 341);
+            this.tbSearchOtd.Name = "tbSearchOtd";
+            this.tbSearchOtd.Size = new System.Drawing.Size(115, 43);
+            this.tbSearchOtd.TabIndex = 23;
+            this.tbSearchOtd.Text = "Пошук";
+            this.tbSearchOtd.UseVisualStyleBackColor = true;
+            this.tbSearchOtd.Click += new System.EventHandler(this.tbSearchOtd_Click);
+            // 
             // fBank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1303, 886);
+            this.Controls.Add(this.txbSearchOtd);
+            this.Controls.Add(this.tbSearchOtd);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.grb4);
             this.Controls.Add(this.grb3);
             this.Controls.Add(this.grb2);
@@ -705,6 +757,7 @@ namespace Bank
             ((System.ComponentModel.ISupportInitialize)(this.працівникиBindingSource)).EndInit();
             this.grb4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.працівникиDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -742,10 +795,10 @@ namespace Bank
         private System.Windows.Forms.Button btnNextWork;
         private System.Windows.Forms.Button btnAddWork;
         private System.Windows.Forms.Button btnPrevWork;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txb8;
+        private System.Windows.Forms.TextBox txb7;
+        private System.Windows.Forms.TextBox txb6;
+        private System.Windows.Forms.TextBox txb5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
@@ -754,13 +807,13 @@ namespace Bank
         private System.Windows.Forms.BindingSource працівникиBindingSource;
         private BDDataSetTableAdapters.ПрацівникиTableAdapter працівникиTableAdapter;
         private BDDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txb11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txb12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txb10;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txb9;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView працівникиDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -771,6 +824,11 @@ namespace Bank
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private BDDataSet bdDataSet1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txbSearchOtd;
+        private System.Windows.Forms.Button tbSearchOtd;
     }
 }
 

@@ -82,5 +82,12 @@ namespace Bank
         {
             працівникиBindingSource.RemoveCurrent();
         }
+
+        private void tbSearchOtd_Click(object sender, EventArgs e)
+        {
+            відділеняBindingSource.Filter = "Convert(№ відділеня, 'System.String') LIKE '" + txbSearchOtd.Text + " ')";
+
+
+        }
     }
 }

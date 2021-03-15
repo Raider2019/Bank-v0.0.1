@@ -9,3 +9,4 @@ C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.csproj.Genera
 C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
 C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.exe
 C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.pdb
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.fGeneral.resources
