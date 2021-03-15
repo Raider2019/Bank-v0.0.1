@@ -1,0 +1,11 @@
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\bin\Debug\BD.mdb
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\bin\Debug\Bank.exe.config
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\bin\Debug\Bank.exe
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\bin\Debug\Bank.pdb
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.csprojAssemblyReference.cache
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.fBank.resources
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.Properties.Resources.resources
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.csproj.GenerateResource.cache
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.exe
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Debug\Bank.pdb
