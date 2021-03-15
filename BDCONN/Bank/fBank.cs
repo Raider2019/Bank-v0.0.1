@@ -85,9 +85,22 @@ namespace Bank
 
         private void tbSearchOtd_Click(object sender, EventArgs e)
         {
-            відділеняBindingSource.Filter = "Convert(№ відділеня, 'System.String') LIKE '" + txbSearchOtd.Text + " ')";
+            відділеняBindingSource.Filter = "(Convert([№ відділення], 'System.String') LIKE  '" + txbSearchOtd.Text + " ')";
 
 
+        }
+
+     
+
+        private void txbSearchWorker_TextChanged(object sender, EventArgs e)
+
+        {
+            //працівникиBindingSource.Filter = "[№ працівника] LIKE '" + txbSearchWorker + "%'";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            працівникиBindingSource.Filter = "Імя LIKE '" + txbSearchWorker.Text + "%'";
         }
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\bin\Release\BD.mdb
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\bin\Release\Bank.exe.config
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\bin\Release\Bank.exe
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\bin\Release\Bank.pdb
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Release\Bank.csprojAssemblyReference.cache
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Release\Bank.fBank.resources
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Release\Bank.fGeneral.resources
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Release\Bank.Properties.Resources.resources
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Release\Bank.csproj.GenerateResource.cache
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Release\Bank.csproj.CoreCompileInputs.cache
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Release\Bank.exe
+C:\Users\AdmiN\source\repos\Bank-v0.0.1\BDCONN\Bank\obj\Release\Bank.pdb

@@ -30,7 +30,7 @@ namespace Bank
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grb1 = new System.Windows.Forms.GroupBox();
             this.btDelOtd = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
@@ -92,7 +92,7 @@ namespace Bank
             this.tableAdapterManager = new Bank.BDDataSetTableAdapters.TableAdapterManager();
             this.bdDataSet1 = new Bank.BDDataSet();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txbSearchWorker = new System.Windows.Forms.TextBox();
             this.txbSearchOtd = new System.Windows.Forms.TextBox();
             this.tbSearchOtd = new System.Windows.Forms.Button();
             this.grb1.SuspendLayout();
@@ -280,14 +280,14 @@ namespace Bank
             // dg1
             // 
             this.dg1.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.відділенняDataGridViewTextBoxColumn,
@@ -525,7 +525,7 @@ namespace Bank
             this.txb6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.працівникиBindingSource, "Імя", true));
             this.txb6.Location = new System.Drawing.Point(127, 81);
             this.txb6.Name = "txb6";
-            this.txb6.Size = new System.Drawing.Size(176, 26);
+            this.txb6.Size = new System.Drawing.Size(224, 26);
             this.txb6.TabIndex = 5;
             // 
             // txb5
@@ -699,21 +699,25 @@ namespace Bank
             this.button1.TabIndex = 21;
             this.button1.Text = "Пошук";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox9
+            // txbSearchWorker
             // 
-            this.textBox9.Location = new System.Drawing.Point(601, 766);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(303, 29);
-            this.textBox9.TabIndex = 22;
+            this.txbSearchWorker.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txbSearchWorker.Location = new System.Drawing.Point(581, 762);
+            this.txbSearchWorker.Multiline = true;
+            this.txbSearchWorker.Name = "txbSearchWorker";
+            this.txbSearchWorker.Size = new System.Drawing.Size(303, 29);
+            this.txbSearchWorker.TabIndex = 22;
+            this.txbSearchWorker.TextChanged += new System.EventHandler(this.txbSearchWorker_TextChanged);
             // 
             // txbSearchOtd
             // 
+            this.txbSearchOtd.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txbSearchOtd.Location = new System.Drawing.Point(601, 354);
             this.txbSearchOtd.Multiline = true;
             this.txbSearchOtd.Name = "txbSearchOtd";
-            this.txbSearchOtd.Size = new System.Drawing.Size(303, 29);
+            this.txbSearchOtd.Size = new System.Drawing.Size(303, 30);
             this.txbSearchOtd.TabIndex = 24;
             // 
             // tbSearchOtd
@@ -735,7 +739,7 @@ namespace Bank
             this.ClientSize = new System.Drawing.Size(1303, 886);
             this.Controls.Add(this.txbSearchOtd);
             this.Controls.Add(this.tbSearchOtd);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txbSearchWorker);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.grb4);
             this.Controls.Add(this.grb3);
@@ -826,7 +830,7 @@ namespace Bank
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private BDDataSet bdDataSet1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txbSearchWorker;
         private System.Windows.Forms.TextBox txbSearchOtd;
         private System.Windows.Forms.Button tbSearchOtd;
     }
