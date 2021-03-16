@@ -30,7 +30,7 @@ namespace Bank
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grb1 = new System.Windows.Forms.GroupBox();
             this.btDelOtd = new System.Windows.Forms.Button();
             this.btUpdate = new System.Windows.Forms.Button();
@@ -91,15 +91,18 @@ namespace Bank
             this.працівникиTableAdapter = new Bank.BDDataSetTableAdapters.ПрацівникиTableAdapter();
             this.tableAdapterManager = new Bank.BDDataSetTableAdapters.TableAdapterManager();
             this.bdDataSet1 = new Bank.BDDataSet();
-            this.button1 = new System.Windows.Forms.Button();
             this.txbSearchWorker = new System.Windows.Forms.TextBox();
             this.txbSearchOtd = new System.Windows.Forms.TextBox();
-            this.tbSearchOtd = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.кліентиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
             this.grb2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dg1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.grb3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.працівникиBindingSource)).BeginInit();
             this.grb4.SuspendLayout();
@@ -125,7 +128,7 @@ namespace Bank
             this.grb1.Controls.Add(this.label1);
             this.grb1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grb1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grb1.Location = new System.Drawing.Point(0, 27);
+            this.grb1.Location = new System.Drawing.Point(0, 46);
             this.grb1.Name = "grb1";
             this.grb1.Size = new System.Drawing.Size(413, 314);
             this.grb1.TabIndex = 0;
@@ -270,7 +273,7 @@ namespace Bank
             this.grb2.Controls.Add(this.dg1);
             this.grb2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.grb2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.grb2.Location = new System.Drawing.Point(440, 27);
+            this.grb2.Location = new System.Drawing.Point(429, 46);
             this.grb2.Name = "grb2";
             this.grb2.Size = new System.Drawing.Size(652, 299);
             this.grb2.TabIndex = 1;
@@ -280,14 +283,14 @@ namespace Bank
             // dg1
             // 
             this.dg1.AutoGenerateColumns = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dg1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.відділенняDataGridViewTextBoxColumn,
@@ -338,9 +341,12 @@ namespace Bank
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.кліентиToolStripMenuItem,
+            this.вихідToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1303, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1303, 29);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -690,17 +696,6 @@ namespace Bank
             this.bdDataSet1.DataSetName = "BDDataSet";
             this.bdDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(429, 753);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 43);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Пошук";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // txbSearchWorker
             // 
             this.txbSearchWorker.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -719,28 +714,53 @@ namespace Bank
             this.txbSearchOtd.Name = "txbSearchOtd";
             this.txbSearchOtd.Size = new System.Drawing.Size(303, 30);
             this.txbSearchOtd.TabIndex = 24;
+            this.txbSearchOtd.TextChanged += new System.EventHandler(this.txbSearchOtd_TextChanged);
             // 
-            // tbSearchOtd
+            // label13
             // 
-            this.tbSearchOtd.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tbSearchOtd.Location = new System.Drawing.Point(440, 341);
-            this.tbSearchOtd.Name = "tbSearchOtd";
-            this.tbSearchOtd.Size = new System.Drawing.Size(115, 43);
-            this.tbSearchOtd.TabIndex = 23;
-            this.tbSearchOtd.Text = "Пошук";
-            this.tbSearchOtd.UseVisualStyleBackColor = true;
-            this.tbSearchOtd.Click += new System.EventHandler(this.tbSearchOtd_Click);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(492, 356);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 22);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Пошук";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(475, 768);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 22);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "Пошук";
+            // 
+            // кліентиToolStripMenuItem
+            // 
+            this.кліентиToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.кліентиToolStripMenuItem.Name = "кліентиToolStripMenuItem";
+            this.кліентиToolStripMenuItem.Size = new System.Drawing.Size(76, 25);
+            this.кліентиToolStripMenuItem.Text = "Кліенти";
+            // 
+            // вихідToolStripMenuItem
+            // 
+            this.вихідToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(60, 25);
+            this.вихідToolStripMenuItem.Text = "Вихід";
+            this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
             // 
             // fBank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1303, 886);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.txbSearchOtd);
-            this.Controls.Add(this.tbSearchOtd);
             this.Controls.Add(this.txbSearchWorker);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.grb4);
             this.Controls.Add(this.grb3);
             this.Controls.Add(this.grb2);
@@ -748,7 +768,7 @@ namespace Bank
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fBank";
-            this.Text = "Form1";
+            this.Text = "Банк";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grb1.ResumeLayout(false);
             this.grb1.PerformLayout();
@@ -756,6 +776,8 @@ namespace Bank
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).EndInit();
             this.grb2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dg1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.grb3.ResumeLayout(false);
             this.grb3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.працівникиBindingSource)).EndInit();
@@ -829,10 +851,12 @@ namespace Bank
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private BDDataSet bdDataSet1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txbSearchWorker;
         private System.Windows.Forms.TextBox txbSearchOtd;
-        private System.Windows.Forms.Button tbSearchOtd;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ToolStripMenuItem кліентиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
     }
 }
 

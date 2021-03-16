@@ -83,24 +83,27 @@ namespace Bank
             працівникиBindingSource.RemoveCurrent();
         }
 
-        private void tbSearchOtd_Click(object sender, EventArgs e)
+
+        private void txbSearchOtd_TextChanged(object sender, EventArgs e)
         {
-            відділеняBindingSource.Filter = "(Convert([№ відділення], 'System.String') LIKE  '" + txbSearchOtd.Text + " ')";
-
-
+            відділеняBindingSource.Filter = "Адрес LIKE '" + txbSearchOtd.Text + "%'";
         }
 
-     
+
 
         private void txbSearchWorker_TextChanged(object sender, EventArgs e)
 
         {
-            //працівникиBindingSource.Filter = "[№ працівника] LIKE '" + txbSearchWorker + "%'";
+            працівникиBindingSource.Filter = "Імя LIKE '" + txbSearchWorker.Text + "%'";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            працівникиBindingSource.Filter = "Імя LIKE '" + txbSearchWorker.Text + "%'";
+            fGeneral f = new fGeneral();
+            if (MessageBox.Show("Припинити роботу?", "Банк", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                this.Hide();
+            f.Show();
         }
     }
 }
