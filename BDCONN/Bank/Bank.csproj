@@ -59,6 +59,12 @@
     <Compile Include="fBank.designer.cs">
       <DependentUpon>fBank.cs</DependentUpon>
     </Compile>
+    <Compile Include="fClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fClients.Designer.cs">
+      <DependentUpon>fClients.cs</DependentUpon>
+    </Compile>
     <Compile Include="fGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fBank.resx">
       <DependentUpon>fBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fClients.resx">
+      <DependentUpon>fClients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fGeneral.resx">
       <DependentUpon>fGeneral.cs</DependentUpon>
