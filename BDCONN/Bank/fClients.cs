@@ -21,6 +21,8 @@ namespace Bank
 
         private void fClients_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bDDataSet.Вклади". При необходимости она может быть перемещена или удалена.
+            this.вкладиTableAdapter.Fill(this.bDDataSet.Вклади);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bDDataSet.Кліенти". При необходимости она может быть перемещена или удалена.
             this.кліентиTableAdapter.Fill(this.bDDataSet.Кліенти);
 
