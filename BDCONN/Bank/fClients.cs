@@ -17,13 +17,7 @@ namespace Bank
             InitializeComponent();
         }
 
-        private void кліентиBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.кліентиBindingSource.EndEdit();
-            this.tableAdapterManager.UpdateAll(this.bDDataSet);
 
-        }
 
         private void fClients_Load(object sender, EventArgs e)
         {

@@ -91,11 +91,13 @@ namespace Bank
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txbSearchWorker = new System.Windows.Forms.TextBox();
             this.txbSearchOtd = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.відділеняTableAdapter = new Bank.BDDataSetTableAdapters.ВідділеняTableAdapter();
             this.працівникиTableAdapter = new Bank.BDDataSetTableAdapters.ПрацівникиTableAdapter();
+            this.WRefresh = new System.Windows.Forms.Button();
             this.tableAdapterManager = new Bank.BDDataSetTableAdapters.TableAdapterManager();
+            this.btnSearchOtd = new System.Windows.Forms.Button();
+            this.btnRefreshWorker = new System.Windows.Forms.Button();
+            this.btnSearchWorker = new System.Windows.Forms.Button();
             this.grb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.відділеняBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDDataSet)).BeginInit();
@@ -340,7 +342,7 @@ namespace Bank
             this.вихідToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1303, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1320, 29);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -690,42 +692,20 @@ namespace Bank
             // txbSearchWorker
             // 
             this.txbSearchWorker.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txbSearchWorker.Location = new System.Drawing.Point(581, 762);
+            this.txbSearchWorker.Location = new System.Drawing.Point(722, 762);
             this.txbSearchWorker.Multiline = true;
             this.txbSearchWorker.Name = "txbSearchWorker";
             this.txbSearchWorker.Size = new System.Drawing.Size(303, 29);
             this.txbSearchWorker.TabIndex = 22;
-            this.txbSearchWorker.TextChanged += new System.EventHandler(this.txbSearchWorker_TextChanged);
             // 
             // txbSearchOtd
             // 
             this.txbSearchOtd.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txbSearchOtd.Location = new System.Drawing.Point(655, 358);
+            this.txbSearchOtd.Location = new System.Drawing.Point(722, 357);
             this.txbSearchOtd.Multiline = true;
             this.txbSearchOtd.Name = "txbSearchOtd";
             this.txbSearchOtd.Size = new System.Drawing.Size(303, 30);
             this.txbSearchOtd.TabIndex = 24;
-            this.txbSearchOtd.TextChanged += new System.EventHandler(this.txbSearchOtd_TextChanged);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(528, 366);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 22);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Пошук";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(475, 768);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(69, 22);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "Пошук";
             // 
             // відділеняTableAdapter
             // 
@@ -735,23 +715,70 @@ namespace Bank
             // 
             this.працівникиTableAdapter.ClearBeforeFill = true;
             // 
+            // WRefresh
+            // 
+            this.WRefresh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.WRefresh.Location = new System.Drawing.Point(12, 373);
+            this.WRefresh.Name = "WRefresh";
+            this.WRefresh.Size = new System.Drawing.Size(95, 28);
+            this.WRefresh.TabIndex = 26;
+            this.WRefresh.Text = "Оновити";
+            this.WRefresh.UseVisualStyleBackColor = true;
+            this.WRefresh.Click += new System.EventHandler(this.Refresh_Click);
+            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.UpdateOrder = Bank.BDDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.ВідділеняTableAdapter = this.відділеняTableAdapter;
+            this.tableAdapterManager.ВідділеняTableAdapter = null;
             this.tableAdapterManager.ВкладиTableAdapter = null;
             this.tableAdapterManager.КліентиTableAdapter = null;
-            this.tableAdapterManager.ПрацівникиTableAdapter = this.працівникиTableAdapter;
+            this.tableAdapterManager.ПрацівникиTableAdapter = null;
+            // 
+            // btnSearchOtd
+            // 
+            this.btnSearchOtd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchOtd.Location = new System.Drawing.Point(615, 357);
+            this.btnSearchOtd.Name = "btnSearchOtd";
+            this.btnSearchOtd.Size = new System.Drawing.Size(83, 32);
+            this.btnSearchOtd.TabIndex = 27;
+            this.btnSearchOtd.Text = "Пошук";
+            this.btnSearchOtd.UseVisualStyleBackColor = true;
+            this.btnSearchOtd.Click += new System.EventHandler(this.btnSearchOtd_Click);
+            // 
+            // btnRefreshWorker
+            // 
+            this.btnRefreshWorker.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRefreshWorker.Location = new System.Drawing.Point(12, 864);
+            this.btnRefreshWorker.Name = "btnRefreshWorker";
+            this.btnRefreshWorker.Size = new System.Drawing.Size(95, 34);
+            this.btnRefreshWorker.TabIndex = 28;
+            this.btnRefreshWorker.Text = "Оновити";
+            this.btnRefreshWorker.UseVisualStyleBackColor = true;
+            this.btnRefreshWorker.Click += new System.EventHandler(this.btnRefreshWorker_Click);
+            // 
+            // btnSearchWorker
+            // 
+            this.btnSearchWorker.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnSearchWorker.Location = new System.Drawing.Point(615, 760);
+            this.btnSearchWorker.Name = "btnSearchWorker";
+            this.btnSearchWorker.Size = new System.Drawing.Size(83, 30);
+            this.btnSearchWorker.TabIndex = 29;
+            this.btnSearchWorker.Text = "Пошук";
+            this.btnSearchWorker.UseVisualStyleBackColor = true;
+            this.btnSearchWorker.Click += new System.EventHandler(this.btnSearchWorker_Click);
             // 
             // fBank
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1303, 886);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
+            this.ClientSize = new System.Drawing.Size(1320, 910);
+            this.Controls.Add(this.btnSearchWorker);
+            this.Controls.Add(this.btnRefreshWorker);
+            this.Controls.Add(this.btnSearchOtd);
+            this.Controls.Add(this.WRefresh);
             this.Controls.Add(this.txbSearchOtd);
             this.Controls.Add(this.txbSearchWorker);
             this.Controls.Add(this.grb4);
@@ -844,10 +871,12 @@ namespace Bank
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.TextBox txbSearchWorker;
         private System.Windows.Forms.TextBox txbSearchOtd;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ToolStripMenuItem кліентиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
+        private System.Windows.Forms.Button WRefresh;
+        private System.Windows.Forms.Button btnSearchOtd;
+        private System.Windows.Forms.Button btnRefreshWorker;
+        private System.Windows.Forms.Button btnSearchWorker;
     }
 }
 

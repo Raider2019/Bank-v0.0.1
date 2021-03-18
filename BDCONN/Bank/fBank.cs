@@ -84,18 +84,10 @@ namespace Bank
         }
 
 
-        private void txbSearchOtd_TextChanged(object sender, EventArgs e)
-        {
-            відділеняBindingSource.Filter = "Адрес LIKE '" + txbSearchOtd.Text + "%'";
-        }
 
 
 
-        private void txbSearchWorker_TextChanged(object sender, EventArgs e)
-
-        {
-            працівникиBindingSource.Filter = "Імя LIKE '" + txbSearchWorker.Text + "%'";
-        }
+    
 
         
         private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
@@ -105,5 +97,44 @@ namespace Bank
                 this.Hide();
             f.Show();
         }
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.відділеняBindingSource.Filter = null;
+                this.відділеняTableAdapter.Fill(bDDataSet.Відділеня);
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnSearchOtd_Click(object sender, EventArgs e)
+        {
+            відділеняBindingSource.Filter = "Адрес LIKE '" + txbSearchOtd.Text + "%'";
+        }
+
+        private void btnSearchWorker_Click(object sender, EventArgs e)
+        {
+            працівникиBindingSource.Filter = "Імя LIKE '" + txbSearchWorker.Text + "%'";
+        }
+
+        private void btnRefreshWorker_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                this.працівникиBindingSource.Filter = null;
+                this.працівникиTableAdapter.Fill(bDDataSet.Працівники);
+            }
+           catch
+            {
+
+            }
+        }
     }
-}
+    }
+
+
