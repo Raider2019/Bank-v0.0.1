@@ -19,6 +19,8 @@ namespace Bank
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bDDataSet.Кліенти". При необходимости она может быть перемещена или удалена.
+         
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bDDataSet.Працівники". При необходимости она может быть перемещена или удалена.
             this.працівникиTableAdapter.Fill(this.bDDataSet.Працівники);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bDDataSet.Відділеня". При необходимости она может быть перемещена или удалена.
@@ -44,11 +46,11 @@ namespace Bank
 
         private void btUpdate_Click(object sender, EventArgs e)
         {
-         
+
             відділеняBindingSource.EndEdit();
             відділеняTableAdapter.Update(bDDataSet.Відділеня);
             MessageBox.Show("ОК");
-           
+
         }
 
         private void btDelOtd_Click(object sender, EventArgs e)
@@ -58,7 +60,7 @@ namespace Bank
 
         private void btnPrevWork_Click(object sender, EventArgs e)
         {
-           працівникиBindingSource.MovePrevious();
+            працівникиBindingSource.MovePrevious();
         }
 
         private void btnAddWork_Click(object sender, EventArgs e)
@@ -87,9 +89,9 @@ namespace Bank
 
 
 
-    
 
-        
+
+
         private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fGeneral f = new fGeneral();
@@ -129,12 +131,14 @@ namespace Bank
                 this.працівникиBindingSource.Filter = null;
                 this.працівникиTableAdapter.Fill(bDDataSet.Працівники);
             }
-           catch
+            catch
             {
 
             }
+          }
         }
-    }
-    }
+       }
+
+   
 
 

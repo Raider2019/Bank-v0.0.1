@@ -4,6 +4,9 @@
 
     partial class BDDataSet
     {
+        partial class КліентиDataTable
+        {
+        }
     }
 }
 
