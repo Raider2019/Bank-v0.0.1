@@ -117,6 +117,31 @@ namespace Bank
         {
             вкладиBindingSource.Filter = "[Термін вкладу місяці] LIKE '" + txSearhVkl.Text + "%'";
         }
+
+        private void банкToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fBank f = new fBank();
+            f.Show();
+            this.Hide();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void звітиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void вихідToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGeneral f = new fGeneral();
+            f.Show();
+            this.Hide();
+
+        }
     }
 
    

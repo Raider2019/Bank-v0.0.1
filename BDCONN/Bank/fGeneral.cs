@@ -29,5 +29,17 @@ namespace Bank
             if (MessageBox.Show("Припинити роботу застосунку?", "Головне меню", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                 Application.Exit();
         }
+
+        private void fGeneral_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCliVKl_Click(object sender, EventArgs e)
+        {
+            fClients f = new fClients();
+            f.Show();
+            this.Hide();
+        }
     }
 }

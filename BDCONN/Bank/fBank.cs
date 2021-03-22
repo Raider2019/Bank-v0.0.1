@@ -136,7 +136,14 @@ namespace Bank
 
             }
           }
+
+        private void кліентиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fClients f = new fClients();
+            f.Show();
+            this.Hide();
         }
+    }
        }
 
    

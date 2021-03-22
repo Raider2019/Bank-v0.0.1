@@ -97,6 +97,10 @@ namespace Bank
             this.btSearchVkl = new System.Windows.Forms.Button();
             this.txSearhVkl = new System.Windows.Forms.TextBox();
             this.btRefreshVkl = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.банкToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.звітиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.вихідToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.кліентиDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.кліентиBindingSource)).BeginInit();
@@ -106,6 +110,7 @@ namespace Bank
             ((System.ComponentModel.ISupportInitialize)(this.вкладиDataGridView)).BeginInit();
             this.gb3.SuspendLayout();
             this.gb4.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb1
@@ -521,7 +526,7 @@ namespace Bank
             this.gb3.Size = new System.Drawing.Size(468, 188);
             this.gb3.TabIndex = 13;
             this.gb3.TabStop = false;
-            this.gb3.Text = "gb3";
+            this.gb3.Text = "Вклади";
             // 
             // gb4
             // 
@@ -545,7 +550,7 @@ namespace Bank
             this.gb4.Size = new System.Drawing.Size(386, 350);
             this.gb4.TabIndex = 14;
             this.gb4.TabStop = false;
-            this.gb4.Text = "groupBox1";
+            this.gb4.Text = "Дані вкладів";
             // 
             // btDelVkl
             // 
@@ -725,6 +730,40 @@ namespace Bank
             this.btRefreshVkl.UseVisualStyleBackColor = true;
             this.btRefreshVkl.Click += new System.EventHandler(this.btRefreshVkl_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.банкToolStripMenuItem,
+            this.звітиToolStripMenuItem,
+            this.вихідToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1392, 24);
+            this.menuStrip1.TabIndex = 21;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // банкToolStripMenuItem
+            // 
+            this.банкToolStripMenuItem.Name = "банкToolStripMenuItem";
+            this.банкToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+            this.банкToolStripMenuItem.Text = "Банк";
+            this.банкToolStripMenuItem.Click += new System.EventHandler(this.банкToolStripMenuItem_Click);
+            // 
+            // звітиToolStripMenuItem
+            // 
+            this.звітиToolStripMenuItem.Name = "звітиToolStripMenuItem";
+            this.звітиToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.звітиToolStripMenuItem.Text = "Звіти";
+            this.звітиToolStripMenuItem.Click += new System.EventHandler(this.звітиToolStripMenuItem_Click);
+            // 
+            // вихідToolStripMenuItem
+            // 
+            this.вихідToolStripMenuItem.Name = "вихідToolStripMenuItem";
+            this.вихідToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.вихідToolStripMenuItem.Text = "Вихід";
+            this.вихідToolStripMenuItem.Click += new System.EventHandler(this.вихідToolStripMenuItem_Click);
+            // 
             // fClients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -741,8 +780,10 @@ namespace Bank
             this.Controls.Add(this.gb3);
             this.Controls.Add(this.gb2);
             this.Controls.Add(this.gb1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "fClients";
-            this.Text = "fClients";
+            this.Text = "Кліенти і вклади";
             this.Load += new System.EventHandler(this.fClients_Load);
             this.gb1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.кліентиDataGridView)).EndInit();
@@ -755,6 +796,8 @@ namespace Bank
             this.gb3.ResumeLayout(false);
             this.gb4.ResumeLayout(false);
             this.gb4.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -829,5 +872,9 @@ namespace Bank
         private System.Windows.Forms.Button btSearchVkl;
         private System.Windows.Forms.TextBox txSearhVkl;
         private System.Windows.Forms.Button btRefreshVkl;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem банкToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem звітиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem вихідToolStripMenuItem;
     }
 }
